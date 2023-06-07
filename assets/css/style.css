@@ -133,8 +133,8 @@ body {
   margin-block-end: 1.25rem;
 }
 
-.profile-card-wrapper .name {
-  font: inherit / bold;
+.name {
+  font-size: inherit;
 }
 
 .profile-card-wrapper span {

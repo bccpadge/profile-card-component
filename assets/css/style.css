@@ -11,7 +11,8 @@
 }
 
 /* reset */
-* Box sizing rules */ *,
+/* Box sizing rules */
+*,
 *::before,
 *::after {
   box-sizing: border-box;

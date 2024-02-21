@@ -45,4 +45,3 @@ In future projects, I want to continue using the CSS font property. It saves me 
 ## Author
 
 - Frontend Mentor - [@bccpadge](https://www.frontendmentor.io/profile/bccpadge)
-- Twitter - [@bccpadge](https://www.twitter.com/bccpadge)

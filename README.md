@@ -43,4 +43,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 In future projects, I want to continue using the CSS font property. It saves me from writing more CSS when I do not have to.<span role="img" aria-label="smiley face">🙂<span>
 
 ## Author
+- Frontend Mentor - [@bccpadge](https://www.frontendmentor.io/profile/bccpadge)
 - LinkedIn - [@rebeccapadgett121](https://linkedin.com/in/rebeccapadgett121)
+
+

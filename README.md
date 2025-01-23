@@ -21,12 +21,12 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Screenshot
 
-![mobile profile crd component](./mobile-profile-card.png)
+![mobile profile crd component](./mobile.png)
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/profile-card-component-using-flexbox-and-css-grid-AGcOT8n_dH)
-- Live Site URL: [Github Pages](https://bccpadge.github.io/profile-card-component/)
+- Solution URL: [Frontend Mentor]()
+- Live Site URL: [Github Pages]()
 
 ## My process
 
@@ -43,6 +43,4 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 In future projects, I want to continue using the CSS font property. It saves me from writing more CSS when I do not have to.<span role="img" aria-label="smiley face">🙂<span>
 
 ## Author
-
-- Frontend Mentor - [@bccpadge](https://www.frontendmentor.io/profile/bccpadge)
-- Twitter - [@bccpadge](https://www.twitter.com/bccpadge)
+- LinkedIn - [@rebeccapadgett121](https://linkedin.com/in/rebeccapadgett121)

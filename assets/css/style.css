@@ -1,17 +1,34 @@
-/* css variables */
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("../fonts/kumbh-sans-v22-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("../fonts/kumbh-sans-v22-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* !css variables */
 :root {
-  --dark-cyan-clr: hsl(185, 75%, 39%);
-  --dark-blue-clr: hsl(229, 23%, 23%);
-  --dark-grayish-blue: hsl(227, 10%, 46%);
-  --dark-gray-clr: hsl(0, 0%, 59%);
-  --white-clr: hsl(0, 0%, 100%);
+  --clr-cyan: 185 75% 39%;
+  --clr-blue: 229 23% 23%;
+  --clr-grayish-blue: 227 10% 46%;
+  --clr-gray: 0 0% 59%;
+  --clr-white: 0 0% 100%;
 
   --fs-18: 1.125rem;
-  --ff-kumbh-sans: "Kumbh Sans", sans-serif;
+  --ff-body: "Kumbh Sans", sans-serif;
 }
 
 /* reset */
-* Box sizing rules */ *,
+/* Box sizing rules */
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -20,7 +37,7 @@
 /* Remove default margin and padding */
 * {
   margin: 0;
-  padding: 0;
+  padding: 0
 }
 
 html {
@@ -28,9 +45,8 @@ html {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ul,
-ol[role="list"] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -41,7 +57,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  min-block-size: 100dvh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -82,99 +98,126 @@ select {
   }
 }
 
-/* general styles */
+/* !sometimes referred to as .sr-only */
+.visually-hidden:not(:focus):not(:active):not(:focus-within) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* !general styles */
 body {
-  font: var(--fs-18) var(--ff-kumbh-sans);
-  background-color: var(--dark-cyan-clr);
+  font: var(--fs-18) var(--ff-body);
+  background-color: hsl(var(--clr-cyan));
   display: grid;
   place-content: center;
   background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat;
   background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+  margin-inline: 1rem;
 }
 
-/* reusable classes */
-.d-flex {
-  display: flex;
+ul {
+  list-style: none;
 }
 
-.name,
-.stat {
-  color: var(--dark-blue-clr);
+:is(.profile__name, .stats__number) {
+  color: hsl(var(--clr-blue));
 }
 
-/* container styles */
-.container {
-  margin-inline: auto;
-  text-align: center;
+:is(.profile__location, .stats__label) {
+  color: hsl(var(--clr-grayish-blue));
 }
 
-/* profile card styles */
-.profile-card-wrapper {
-  --radius: 0.9375rem;
-
-  max-width: 22.5rem;
+/* !card styles */
+.card {
+  --_card-radius: 0.625rem;
+  max-width: 21.875rem;
   height: 23.75rem;
-  background-color: var(--white-clr);
+  background-color: hsl(var(--clr-white));
+  border-radius: var(--_card-radius);
   overflow: hidden;
-  border-radius: var(--radius);
-  margin-inline: 1.25rem;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-.profile-card-banner img {
-  --radius-circle: 50%;
+.profile__banner-wrapper {
+  position: relative;
 
-  display: inline-block;
-  width: 6.25rem;
-  height: 6.25rem;
-  border-radius: var(--radius-circle);
-  border: 0.25rem solid var(--white-clr);
-  margin-block-start: -3.25rem;
-  margin-block-end: 1.25rem;
+  .profile__banner {
+    --_banner-radius: 50%;
+    position: absolute;
+    top: 5.625rem;
+    left: 50%;
+    translate: -50%;
+
+    .profile__banner-img {
+      border-radius: var(--_banner-radius);
+      border: 5px solid hsl(var(--clr-white));
+    }
+  }
 }
 
-.name {
-  font-size: inherit;
+.profile {
+  margin-block-start: 3.75rem;
+
+  .profile__header {
+    display: grid;
+    gap: 0.625rem;
+    place-items: center;
+  }
+
 }
 
-.profile-card-wrapper span {
-  font-weight: 400;
-  color: var(--dark-gray-clr);
-  margin-inline-start: 0.625rem;
+.profile__name {
+  font-size: 1.25rem;
+
+  span {
+    font-weight: 400;
+    color: hsl(var(--clr-grayish-blue));
+  }
 }
 
-.profile-card-wrapper .location {
-  font-size: 0.875rem;
-  color: var(--dark-gray-clr);
-  margin-block-start: 0.3125rem;
-  padding-block-end: 1.375rem;
+.profile__location {
+  font-size: 0.9375rem;
+  margin-block-end: 1rem;
 }
 
-.profile-card-footer {
-  justify-content: space-between;
-  border-top: 1px solid hsla(227, 10%, 46%, 0.2);
-  padding: 1.875rem 3.125rem;
+.stats__list {
+  border-block-start: 1px solid hsla(227, 10%, 46%, 0.2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: 14vh;
+
+  .stats__list-item {
+    display: grid;
+    place-items: center;
+  }
+
+  .stats__number {
+    font-weight: 700;
+  }
+
+  .stats__label {
+    font-size: 0.6875rem;
+    letter-spacing: 0.125rem;
+    margin-block-start: 0.625rem;
+  }
 }
 
-.profile-card-footer .stat {
-  font-weight: 700;
-}
-
-.profile-card-footer p:last-child {
-  font-size: 0.688rem;
-  color: var(--dark-gray-clr);
-  letter-spacing: 0.125rem;
-  margin-block-start: 0.625rem;
-}
-
-/* attribution */
+/* !attribution */
 .attribution {
-  position: fixed;
-  bottom: 1em;
-  left: 1em;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   text-align: center;
+  position: fixed;
+  inset: auto auto 1em 1em;
 }
+
 .attribution a {
-  color: hsl(0, 0%, 100%);
+  color: hsl(var(--clr-white));
 }

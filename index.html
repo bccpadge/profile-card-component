@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
-    <title>Frontend Mentor | Profile card component</title>
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
-    <!-- css -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <main class="container">
-      <div class="profile-card-wrapper">
-        <figure>
-          <img src="./assets/images/bg-pattern-card.svg" alt="" aria-hidden="true" />
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Profile card component</title>
+  <!-- !css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <main>
+    <section class="card">
+      <h1 class="visually-hidden">Welcome to the Profile card for Victor Crest</h1>
+      <div class="profile__banner-wrapper">
+        <img src="./assets/images/bg-pattern-card.svg" width="350" height="140" aria-hidden="true" alt="">
+        <figure class="profile__banner">
+          <img class="profile__banner-img" src="./assets/images/image-victor.jpg" width="96" height="96"
+            alt="A headshot of Victor Crest" />
+          <figcaption class="visually-hidden">A headshot of Victor Crest </figcaption>
         </figure>
-        <div class="profile-card">
-          <figure class="profile-card-banner">
-            <img src="./assets/images/image-victor.jpg" alt="headshot of a man named Victor Crest" />
-          </figure>
-          <h1 class="name">Victor Crest<span>26</span></h1>
-          <p class="location">London</p>
-          <ul class="profile-card-footer d-flex">
-            <li>
-              <p class="stat">80K</p>
-              <p>Followers</p>
-            </li>
-            <li>
-              <p class="stat">803K</p>
-              <p>Likes</p>
-            </li>
-            <li>
-              <p class="stat">1.4K</p>
-              <p>Photos</p>
-            </li>
-          </ul>
-        </div>
       </div>
-    </main>
-    <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Rebecca Padgett</a>
-      .
-    </footer>
-  </body>
+      <article class="profile">
+        <header class="profile__header">
+          <h2 class="profile__name">Victor Crest
+            <span>26</span>
+          </h2>
+          <p class="profile__location">London</p>
+        </header>
+        <ul class="stats__list">
+          <li class="stats__list-item">
+            <strong class="stats__number">80K</strong>
+            <p class="stats__label">Followers</p>
+          </li>
+          <li class="stats__list-item">
+            <strong class="stats__number">803K</strong>
+            <p class="stats__label">Likes</p>
+          </li>
+          <li class="stats__list-item">
+            <strong class="stats__number">1.4K</strong>
+            <p class="stats__label">Photos</p>
+          </li>
+        </ul>
+      </article>
+
+    </section>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://linkedin.com/in/rebeccapadgett121">Rebecca Padgett</a>.
+  </footer>
+</body>
+
 </html>
